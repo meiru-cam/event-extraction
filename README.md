@@ -8,6 +8,7 @@ Papers from top conferences and journals for event extraction in recent years.
 - [Classification-based](#Classification-based)
 - [Generation-based](#Generation-based)
 - [QA-based](#QA-based)
+- [Augmentation](#Augmentation)
 </p></blockquote>
 
 
@@ -64,7 +65,9 @@ Papers from top conferences and journals for event extraction in recent years.
 **Event Extraction by Answering (Almost) Natural Questions**
 [paper](http://arxiv.org/abs/2004.13625)
 
-
+## Augmentation
+**Automatically Labeled Data Generation for Large Scale Event Extraction**
+[paper](http://aclweb.org/anthology/P17-1038)
 
 
 
