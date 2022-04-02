@@ -3,7 +3,7 @@ Papers from top conferences and journals for event extraction in recent years.
 
 
 # Table of Contents
-<summary><b>Expand Table of Contents</b></summary><blockquote><p align="justify">
+<summary><b>Table of Contents</b></summary><blockquote><p align="justify">
 
 - [Classification-based](#Classification-based)
 - [Generation-based](#Generation-based)
