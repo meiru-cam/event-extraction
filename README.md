@@ -10,6 +10,9 @@ Papers from top conferences and journals for event extraction in recent years.
 - [QA-based](#QA-based)
 </p></blockquote>
 
+
+
+
 ## Classification-based
 **A Joint Neural Model for Information Extraction with Global Features**
 [paper](https://www.aclweb.org/anthology/2020.acl-main.713)
