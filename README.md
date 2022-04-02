@@ -15,8 +15,9 @@ Papers from top conferences and journals for event extraction in recent years.
 
 
 ## Classification-based
-**A Joint Neural Model for Information Extraction with Global Features**
-[paper](https://www.aclweb.org/anthology/2020.acl-main.713)
+**A Joint Neural Model for Information Extraction with Global Features.** 
+_Ying Lin, Heng Ji, Fei Huang, Lingfei Wu_ ACL2020 [paper](https://www.aclweb.org/anthology/2020.acl-main.713) 
+> Keywords: 
 
 **Automatically Labeled Data Generation for Large Scale Event Extraction**
 [paper](http://aclweb.org/anthology/P17-1038)
