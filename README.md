@@ -67,23 +67,54 @@ _Sijia Wang, Mo Yu, Shiyu Chang, Lichao Sun, Lifu Huang_ [ACL2022](http://arxiv.
 ## Generation-based
 
 **DEGREE: A Data-Efficient Generative Event Extraction Model**
-[paper](http://arxiv.org/abs/2108.12724)
+_I-Hung Hsu, Kuan-Hao Huang, Elizabeth Boschee†, Scott Miller, Prem Natarajan, Kai-Wei Chang, Nanyun Peng_ [arxiv](http://arxiv.org/abs/2108.12724)
+> Keyword: prompt, end-to-end
+> 
+> Proposed DEGREE that takes the original passage and a set of prompts (predefined based on event type) as input and generate template-based text so that the trigger word and arguments can be easily extracted/decoded from the output text. The template can probide ontology information of the event.
+> 
+> *need to know the event type first as the prompts are event based*
+> 
+> Advantage: models **label semantics** (event role description), **output dependencies** (extract trigger and argument as once) and **event structure** (expressive prior) 
 
-**Document-Level Event Argument Extraction by Conditional Generation**
-[paper](http://arxiv.org/abs/2104.05919)
+**Document-Level Event Argument Extraction by Conditional Generation (BART-Gen)**
+_Sha Li and Heng Ji and Jiawei Han_ [NAACL2021](http://arxiv.org/abs/2104.05919)
+> Keywords: document-level, argument extraction, prompt/template, end-to-end
+> 
+> Proposed document-level event argument extraction model that generates output by fill in template (special token "tgr" to identify trigger in document, and "arg" as placeholders in template) with arguments, tackle with the coreference issue by prioritise longest name mention over nominal mentions and pronouns. Applied clarification statements to add entity type constraints on arguments based on their role. The triggers are extracted through sequence labeling.
 
-**Generating Disentangled Arguments with Prompts: A Simple Event Extraction Framework that Works**
-[paper](http://arxiv.org/abs/2110.04525)
+**Generating Disentangled Arguments with Prompts: A Simple Event Extraction Framework that Works (GDAP)**
+_Jinghui Si, Xutan Peng, Chen Li, Haotian Xu, Jianxin Li_ [ICASSP 2022](http://arxiv.org/abs/2110.04525)
+> Keywords: prompt, negative sampling
+> 
+> GDAP architecture contains three models (ETD, TrgE, and ArgE). ETD learn to encode the raw sentence and decode its event types using **Parenthesis Representation** ((ET1)(ET2)...(ETi)...(ETx)). After event type been predicted, TrgE extract the trigger words by input in a prompt that is formed by event type and sentence in the format of "ET_i</s>Sent", output represented in the same way as ETD -> ((Trg1 )(Trg2 )⋯(Trgy )). With trigger words been extracted, the prompt for ArgE is created in the format of "ET_i</s>RTij</s>Sent", expected outputs is ((Trg1 )(Trg2 )⋯(Trgy ))
+> 
+> tire-based constraint decoding algorithm is applied to guarantee the token validness
+> 
+> introduced negative sampling mechanism to train TrgE and ArgE, which is to randomly select N event types that have not appeared in the Sent and expect the model to learn to only generate empty sequence
+> 
+> Thought: remove irrelevant sentences in the document imrpoves the extraction performance
 
-**Multilingual Generative Language Models for Zero-Shot Cross-Lingual Event Argument Extraction**
-[paper](http://arxiv.org/abs/2203.08308)
+**Multilingual Generative Language Models for Zero-Shot Cross-Lingual Event Argument Extraction (X-GEAR)**
+_Kuan-Hao Huang∗† I-Hung Hsu∗‡ Premkumar Natarajan‡ Kai-Wei Chang† Nanyun Peng_ [ACL2022](http://arxiv.org/abs/2203.08308)
+> Keywords: cross-lingual, prompt, giben-trigger
+> 
+> Proposed X-GEAR that takes the passage and prompt containing event trigger and language-agnostic template as input to generate output by fill in the template with event arguments. Language-agnostic template is created using special tokens to represent argument role type
+> 
+> Thought: not end-to-end event extraction
 
-**Structured Prediction as Translation between Augmented Natural Languages**
-[paper](http://arxiv.org/abs/2101.05779)
+**Structured Prediction as Translation between Augmented Natural Languages (TANL)**
+_Giovanni Paolini, Ben Athiwaratkun, Jason Krone, Jie Ma, Alessandro Achille, Rishita Anubhai, Cicero Nogueira dos Santos, Bing Xiang, Stefano Soatto_ [ICLR2021](http://arxiv.org/abs/2101.05779)
+> Keywords: augmented language translation, unified model
+> 
+> Unified model that can work on entity and relation extraction, semantic role labeling, coreference resolution. Event extraction is done by first extract trigger, then extract arguments. The trigger word and event type will be added to the output sentence "... \[trigger_word | event_type\] ...". Same for argument but with trigger words mentioned "... \[entity | type | role_type = trigger \] ..."
+> 
+> Thought: coreference can be treated while extracting trigger and arguments
 
 **Text2Event: Controllable Sequence-to-Structure Generation for End-to-end Event Extraction**
-[paper](http://arxiv.org/abs/2106.09232)
-
+_Yaojie Lu, Hongyu Lin, Jin Xu, Xianpei Han, Jialong Tang, Annan Li, Le Sun, Meng Liao, Shaoyi Chen_ [ACL2021](http://arxiv.org/abs/2106.09232)
+> Keywords: event schema, controlled generation, end-to-end, curriculum learning
+> 
+> TEXT2EVENT is a sequence-to-structure network that directly generate event schemas and text spans to form event records (in lineralized format) via constrained decoding (trie-based constrained decoding). Event schema knowledge is injected as prompt to the decoder fir valid event structure generation.
 
 ## QA-based
 
