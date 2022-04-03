@@ -119,16 +119,25 @@ _Yaojie Lu, Hongyu Lin, Jin Xu, Xianpei Han, Jialong Tang, Annan Li, Le Sun, Men
 ## QA-based
 
 **Biomedical Event Extraction as Multi-turn Question Answering**
-[paper](https://www.aclweb.org/anthology/2020.louhi-1.10)
+_Xing David Wang, Leon Weber, Ulf Leser_ [workshop](https://www.aclweb.org/anthology/2020.louhi-1.10)
+> Cast Event Extraction as a serious of QA tasks where each QA problem is modeled as a sequence labeling task
+> 
 
-**Event Extraction as Machine Reading Comprehension**
-[paper](https://www.aclweb.org/anthology/2020.emnlp-main.128)
+**Event Extraction as Machine Reading Comprehension (RCEE)**
+_Jian Liu, Yubo Chen, Kang Liu, Wei Bi, Xiaojiang Liu_ [EMNLP2020](https://www.aclweb.org/anthology/2020.emnlp-main.128)
+> Keywords: style transfer, template/prompt
+> 
+> First use special query \[EVENT\] to extract trigger adn predict event, then generate questions for each role in unsupervised manner by combining template and style-transferred descriptive context in the input sentence. The model answers each question and synthesizes all the answers as EE result.
 
-**Event Extraction as Multi-turn Question Answering**
-[paper](https://www.aclweb.org/anthology/2020.findings-emnlp.73)
+**Event Extraction as Multi-turn Question Answering (MQAEE)**
+_Fayuan Li, Weihua Peng, Yuguang Chen, Quan Wang, Lu Pan, Yajuan Lyu, Yong Zhu_ [EMNLP2020_finding](https://www.aclweb.org/anthology/2020.findings-emnlp.73)
+> Split EE into trigger identification (extractive MRC), trigger classification (YES/NO QA) and argument extraction (extractive MRC)
+> 
+> Answers are constrained as contiguous spans in the passage
 
-**Event Extraction by Answering (Almost) Natural Questions**
-[paper](http://arxiv.org/abs/2004.13625)
+**Event Extraction by Answering (Almost) Natural Questions (BERT_QA)**
+_Xinya Du and Claire Cardie_ [EMNLP2020](http://arxiv.org/abs/2004.13625)
+> seperate QA model for trigger extraction and argument extraction; BERT format \[CLS\] \<question\> \[SEP\] \<sentence\> \[SEP\]; extract trigger with simple question "the action"; include context information to argument extraction arguments directly by adding the trigger word to role template; 
 
 
 ## Augmentation
